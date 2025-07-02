@@ -2,72 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Arista Project</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(to bottom, #edf8f2, #d0f0df);
-      color: #2d4030;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      color: #264d3c;
-    }
-
-    p.subtitle {
-      font-size: 1.3em;
-      max-width: 600px;
-      margin: auto;
-      color: #4a6c58;
-    }
-
-    section {
-      max-width: 700px;
-      background: #ffffffcc;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #6b8a7c;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>The Arista Project</h1>
-    <p class="subtitle">Reimagining agriculture with bio-based, holistic pesticide innovation. Starting with neem, tea tree, and nature’s own solutions.</p>
-  </header>
+  <div class="container">
+    <img src="neem-top-left.png" class="botanical top-left" alt="Neem drawing">
+    <img src="neem-top-right.png" class="botanical top-right" alt="Neem drawing">
 
-  <section>
-    <p>
-      The Arista Project is building a smarter, greener future in plant biotech. We're starting with a platform that helps farmers and growers identify safe, effective alternatives to synthetic pesticides using AI-assisted recommendations.
-    </p>
-    <p>
-      Rooted in scientific evidence. Inspired by ecosystems. Powered by purpose.
-    </p>
-  </section>
+    <header>
+      <h1>The Arista Project</h1>
+      <p class="subtitle">
+        Reimagining agriculture with bio-based, holistic pesticide innovation.  
+        Starting with neem, tea tree, and nature’s own solutions.
+      </p>
+    </header>
 
-  <footer>
-    &copy; 2025 The Arista Project — Designed with nature in mind.
-  </footer>
+    <section class="description">
+      <p>
+        The Arista Project is building a smarter, greener future in plant biotech.  
+        We're starting with a platform that helps farmers and growers identify safe,  
+        effective alternatives to synthetic pesticides using AI-assisted recommendations.
+      </p>
+      <p>
+        Rooted in scientific evidence. Inspired by ecosystems. Powered by purpose.
+      </p>
+    </section>
+
+    <div class="wheat-field">
+      <img src="wheat-swaying.gif" alt="Swaying wheat animation">
+    </div>
+
+    <footer>© 2025 The Arista Project — Designed with nature in mind.</footer>
+  </div>
 </body>
 </html>
