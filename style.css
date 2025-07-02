@@ -1,60 +1,70 @@
-body, html {
+/* Reset margin and set base font */
+body {
   margin: 0;
-  padding: 0;
-  font-family: Georgia, serif;
-  color: #123423;
-  background-color: #f9f6e7;
+  font-family: 'Georgia', serif;
+  background-color: #f9f6ef;
+  color: #1f2d16;
 }
 
+/* Main hero container */
 .hero {
   position: relative;
-  text-align: center;
-  padding: 100px 20px;
   min-height: 100vh;
-  background-color: #f9f6e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
   overflow: hidden;
 }
 
+/* Background botanical images */
 .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('neem-bg.png') no-repeat top left,
-              url('wheat-bg.png') no-repeat bottom right;
-  background-size: 30%, 30%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url('neem.jpeg'),
+    url('wheat_oat.jpg');
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: 35%, 35%;
   opacity: 0.2;
-  z-index: 0;
+  z-index: 1;
 }
 
+/* Main content */
 .content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 800px;
-  margin: 0 auto;
+  padding: 2rem;
 }
 
+/* Header styling */
 h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  color: #234d20;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  background: #f9f6e7;
-  color: #555;
-}
-  z-index: 0;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #666;
 }
