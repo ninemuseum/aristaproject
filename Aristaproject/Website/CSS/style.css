@@ -6,17 +6,22 @@ body {
   color: #1f2d16;
 }
 
-/* Main hero container */
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
   overflow: hidden;
 }
+
+.hero .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 
 /* Background botanical images */
 .overlay {
@@ -34,6 +39,72 @@ body {
   opacity: 0.2;
   z-index: 1;
 }
+
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Custom leaf cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url('../Visuals/Arista-logo-cursor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* Top Navigation Bar */
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfaf3; /* or your navbar background */
+  padding: 10px 40px;        /* reduce vertical padding here */
+  height: 60px;              /* set a fixed, smaller height */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+
+.logo-img {
+  height: 100px;  /* Try 60–70px for better presence */
+  width: auto;
+  padding-left: 8px;  /* Optional: for spacing */
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #2c4526;  /* match your theme green */
+  font-weight: 500;
+}
+
 
 
 /* Main content */
@@ -62,6 +133,53 @@ h1 {
   line-height: 1.6;
 }
 
+/* Why Arista Section */
+.why-arista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 2rem 3rem 2rem; /* top, right, bottom, left */
+  opacity: 0;
+  transform: translateY(20px); /* less downward offset */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* faster animation */
+}
+
+
+.why-arista.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.arista-card {
+  background-color: #f6f3ed;
+  border: 1px solid #e3dccf;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.arista-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2e442f;
+}
+
+.arista-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333e30;
+}
+
+/* Hide by default until in view */
+.hidden {
+  visibility: hidden;
+}
+
+
+
 /* Footer */
 footer {
   text-align: center;
@@ -69,3 +187,4 @@ footer {
   font-size: 0.875rem;
   color: #666;
 }
+

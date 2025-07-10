@@ -6,7 +6,28 @@
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-  <div class="hero">
+
+
+  <body>
+  <!-- Navigation Bar -->
+
+<<nav class="topbar">
+  <div class="logo-container">
+    <img src="../Visuals/Arista-logo-removebg.png" alt="Arista Logo" class="logo-img">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#mission">Our Mission</a></li>
+    <li><a href="#science">The Science</a></li>
+    <li><a href="#involved">Get Involved</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+  <div class="hero" id="hero">
     <div class="overlay"></div>
     <div class="content">
       <h1>The Arista Project</h1>
@@ -22,8 +43,57 @@
     </div>
   </div>
 
+
+
+  <section class="why-arista hidden">
+  <div class="arista-card">
+    <h2>Why Arista?</h2>
+    <p>
+      The name <em>Arista</em> comes from the Latin for the awn — the fine bristle of wheat.  
+      A subtle, protective botanical structure that supports the seed’s growth and dispersal.  
+      It symbolises agriculture at its purest: quiet, resilient, and full of promise.
+    </p>
+  </div>
+</section>
+
+
+
   <footer>
     © 2025 The Arista Project — Designed with nature in mind.
   </footer>
+
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          entry.target.classList.remove('hidden');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    const aristaSection = document.querySelector('.why-arista');
+    observer.observe(aristaSection);
+  </script>
+</body>
+
+<script src="../Javascript/script.js"></script>
+
+
+
+<div class="custom-cursor"></div>
+<script>
+  const cursor = document.querySelector('.custom-cursor');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+</script>
+
+
+
 </body>
 </html>
