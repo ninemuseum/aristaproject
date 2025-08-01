@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
 <body>
+
+
 
   <!-- Navigation Bar -->
   <nav class="topbar">
@@ -25,105 +28,137 @@
     </ul>
   </nav>
 
-  <!-- Custom cursor -->
-  <div class="custom-cursor"></div>
-  <script>
-    const cursor = document.querySelector('.custom-cursor');
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-  </script>
+<div class="custom-cursor"></div>
+<script>
+  const cursor = document.querySelector('.custom-cursor');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+</script>
+
+<!-- Wrapper for styling -->
+<div class="mission-section">
+  <main>
+    <section class="mission">
+      <h1>Platform Prototype</h1>
+      <p>Use a smart tool that shows you plant-based alternatives to synthetic pesticides — personalised to your crop, pests, and local environment.</p>
+
+      <form class="prototype-form">
+        <fieldset>
+          <legend>Section A: Crop Information</legend>
+          
+          <label for="crops">Select your crop(s):</label>
+          <select id="crops" name="crops" multiple>
+            <option>Wheat</option>
+            <option>Barley</option>
+            <option>Oats</option>
+            <option>Oilseed rape</option>
+            <option>Potato</option>
+            <option>Sugar Beet</option>
+            <option>Other</option>
+          </select>
+
+          <label>Do you currently use synthetic pesticides?</label>
+          <label class="inline"><input type="radio" name="pesticides" value="yes">Yes</label>
+          <label class="inline"><input type="radio" name="pesticides" value="no">No</label>
+
+          <label for="pesticide-type">Type (if known):</label>
+          <input type="text" id="pesticide-type" name="pesticide-type">
+        </fieldset>
+
+        <fieldset>
+          <legend>Section B: Pest Concerns</legend>
+
+          <label for="pests">Common pests (select all that apply):</label>
+          <select id="pests" name="pests" multiple>
+            <option>Aphids</option>
+            <option>Whiteflies</option>
+            <option>Rootworms</option>
+            <option>Other</option>
+          </select>
+
+          <label for="season">When do they appear?</label>
+          <select id="season" name="season">
+            <option>Spring</option>
+            <option>Summer</option>
+            <option>Year-round</option>
+            <option>Irregular</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Section C: Location & Environmental Concerns</legend>
+
+          <label for="region">Region/Postcode:</label>
+          <input type="text" id="region" name="region">
+        
 
 
-  <!-- Prototype Tool Options  -->
-  <section class="prototype-intro">
-    <p>Use a smart tool that shows you plant-based alternatives to synthetic pesticides — personalised to your crop, pests, and local environment.</p>
-  </section>
+          <label for="Farmland Topography">Select your topography:</label>
+          <select id="topography" name="topography" multiple>
+            <option>Flat</option>
+            <option>Gently Undulating</option>
+            <option>Rolling Hills</option>
+            <option>Steep Slopes</option>
+            <option>Terraced Hillsides</option>
+            <option>Low-Lying</option>
+            <option>Floodplain</option>
+            <option>Upland Moorland Margins</option>
 
-  <form class="prototype-form">
-    <fieldset>
-      <legend>Section A: Crop Information</legend>
-      <label for="crops">Select your crop(s):</label>
-      <select id="crops" name="crops" multiple>
-        <option>Wheat</option>
-        <option>Barley</option>
-        <option>Oats</option>
-        <option>Oilseed rape</option>
-        <option>Potato</option>
-        <option>Sugar Beet</option>
-        <option>Other</option>
-      </select>
+          </select>
 
-      <label>Do you currently use synthetic pesticides?</label>
-      <input type="radio" id="yes" name="pesticides" value="yes"><label for="yes">Yes</label>
-      <input type="radio" id="no" name="pesticides" value="no"><label for="no">No</label>
 
-      <label for="pesticide-type">Type (if known):</label>
-      <input type="text" id="pesticide-type" name="pesticide-type">
-    </fieldset>
 
-    <fieldset>
-      <legend>Section B: Pest Concerns</legend>
-      <label for="pests">Common pests (select all that apply):</label>
-      <select id="pests" name="pests" multiple>
-        <option>Aphids</option>
-        <option>Whiteflies</option>
-        <option>Rootworms</option>
-        <option>Other</option>
-      </select>
+          <p>What do you want to protect?</p>
+          <label class="inline"><input type="checkbox" name="protection" value="Water quality">Yield</label>
+          <label class="inline"><input type="checkbox" name="protection" value="Animal Biodiversity">Animal Biodiversity</label>
+          <label class="inline"><input type="checkbox" name="protection" value="Plant Biodiversity">Plant Biodiversity</label>
+          <label class="inline"><input type="checkbox" name="protection" value="Water quality">Water quality</label>
 
-      <label for="season">When do they appear?</label>
-      <select id="season" name="season">
-        <option>Spring</option>
-        <option>Summer</option>
-        <option>Year-round</option>
-        <option>Irregular</option>
-      </select>
-    </fieldset>
+          <p>Health concerns:</p>
+          <label class="inline"><input type="checkbox" name="health" value="asthma">Asthma</label>
+          <label class="inline"><input type="checkbox" name="health" value="skin">Skin Irritation</label>
+          <label class="inline"><input type="checkbox" name="health" value="groundwater">Groundwater contamination</label>
+        </fieldset>
 
-    <fieldset>
-      <legend>Section C: Location & Environmental Concerns</legend>
-      <label for="region">Region/Postcode:</label>
-      <input type="text" id="region" name="region">
+        <fieldset>
+          <legend>Section D: Your Goals</legend>
 
-      <p>What do you want to protect?</p>
-      <label><input type="checkbox" name="protection" value="Animal Biodiversity"> Animal Biodiversity</label>
-      <label><input type="checkbox" name="protection" value="Plant Biodiversity"> Plant Biodiversity</label>
-      <label><input type="checkbox" name="protection" value="Water quality"> Water quality</label>
+          <p>Why are you exploring alternatives?</p>
+          <label class="inline"><input type="checkbox" name="goals" value="reduce">Reduce pesticide use</label>
+          <label class="inline"><input type="checkbox" name="goals" value="soil">Improve soil health</label>
+          <label class="inline"><input type="checkbox" name="goals" value="subsidies">Qualify for DEFRA green subsidies</label>
+          <label class="inline"><input type="checkbox" name="goals" value="branding">Marketable organic</label>
+        </fieldset>
 
-      <p>Health concerns:</p>
-      <label><input type="checkbox" name="health" value="asthma"> Asthma</label>
-      <label><input type="checkbox" name="health" value="skin"> Skin Irritation</label>
-      <label><input type="checkbox" name="health" value="groundwater"> Groundwater contamination</label>
-    </fieldset>
+        <button type="submit">Submit</button>
+      </form>
 
-    <fieldset>
-      <legend>Section D: Your Goals</legend>
-      <p>Why are you exploring alternatives?</p>
-      <label><input type="checkbox" name="goals" value="reduce"> Reduce pesticide use</label>
-      <label><input type="checkbox" name="goals" value="soil"> Improve soil health</label>
-      <label><input type="checkbox" name="goals" value="subsidies"> Qualify for DEFRA/green subsidies</label>
-      <label><input type="checkbox" name="goals" value="branding"> Marketable organic/natural branding</label>
-      <label><input type="checkbox" name="goals" value="compliance"> Maintain EU/FMCG compliance</label>
-    </fieldset>
+      <section class="coming-soon">
+        <h2>Smart Recommendations — Coming Soon</h2>
+        <p>We're working on a feature that shows compatible plant-based products and sustainable practices based on your inputs, with guidance on subsidies, compliance, and next steps.</p>
+      </section>
+    </section>
+  </main>
+</div>
 
-    <button type="submit">Submit</button>
-  </form>
 
   <section class="coming-soon">
     <h2>Smart Recommendations — Coming Soon</h2>
     <p>We're working on a feature that shows compatible plant-based products and sustainable practices based on your inputs, with guidance on subsidies, compliance, and next steps.</p>
   </section>
-</body>
-</html>
 
 
-
-  <!-- Footer -->
+   <!-- Footer -->
   <footer>
     © 2025 The Arista Project — Designed with nature in mind.
   </footer>
 
 </body>
 </html>
+
+
+
+
+
