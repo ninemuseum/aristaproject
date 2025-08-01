@@ -48,43 +48,62 @@
         <fieldset>
           <legend>Section A: Crop Information</legend>
           
+        
+
+
+        <!-- Drop down menu for select crops -->
+        <select id="crops" name="crops">
           <label for="crops">Select your crop(s):</label>
-          <select id="crops" name="crops" multiple>
-            <option>Wheat</option>
-            <option>Barley</option>
-            <option>Oats</option>
-            <option>Oilseed rape</option>
-            <option>Potato</option>
-            <option>Sugar Beet</option>
-            <option>Other</option>
-          </select>
+          <option>Wheat</option>
+          <option>Barley</option>
+          <option>Oats</option>
+          <option>Oilseed rape</option>
+          <option>Potato</option>
+          <option>Sugar Beet</option>
+          <option>Other</option>
+        </select>
+         <div id="other-crop-container" style="display:none;">
+        <label for="other-crop">Please specify:</label>
+        <input type="text" id="other-crop" name="other-crop" placeholder="Enter your crop">
+        </div>
+        </select>
+            
 
-          <label>Do you currently use synthetic pesticides?</label>
-          <label class="inline"><input type="radio" name="pesticides" value="yes">Yes</label>
-          <label class="inline"><input type="radio" name="pesticides" value="no">No</label>
+          <fieldset>
+            <legend>Section B: Insect Pest Concerns</legend>
+              <select id="pests" name="pests">
+              <label for="pests">Common pests (select all that apply):</label>
+              <option value="Aphids">Aphids</option>
+              <option value="Whiteflies">Whiteflies</option>
+              <option value="Rootworms">Rootworms</option>
+              <option value="Other">Other</option>
+            </select>
 
-          <label for="pesticide-type">Type (if known):</label>
-          <input type="text" id="pesticide-type" name="pesticide-type">
-        </fieldset>
 
-        <fieldset>
-          <legend>Section B: Pest Concerns</legend>
 
-          <label for="pests">Common pests (select all that apply):</label>
-          <select id="pests" name="pests" multiple>
-            <option>Aphids</option>
-            <option>Whiteflies</option>
-            <option>Rootworms</option>
-            <option>Other</option>
-          </select>
+  <div id="other-pest-container" style="display:none; margin-top: 10px;">
+    <label for="other-pest">Please specify:</label>
+    <input type="text" id="other-pest" name="other-pest" placeholder="Enter other pest">
+  </div>
+</fieldset>
 
           <label for="season">When do they appear?</label>
           <select id="season" name="season">
             <option>Spring</option>
             <option>Summer</option>
+            <option>Autumn</option>
+            <option>Winter</option>
             <option>Year-round</option>
             <option>Irregular</option>
           </select>
+        </fieldset>
+
+           <label>Do you currently use synthetic pesticides?</label>
+          <label class="inline"><input type="radio" name="pesticides" value="yes">Yes</label>
+          <label class="inline"><input type="radio" name="pesticides" value="no">No</label>
+
+          <label for="pesticide-type">Type:</label>
+          <input type="text" id="pesticide-type" name="pesticide-type">
         </fieldset>
 
         <fieldset>
@@ -96,7 +115,7 @@
 
 
           <label for="Farmland Topography">Select your topography:</label>
-          <select id="topography" name="topography" multiple>
+          <select id="topography" name="topography">
             <option>Flat</option>
             <option>Gently Undulating</option>
             <option>Rolling Hills</option>
@@ -111,7 +130,7 @@
 
 
           <p>What do you want to protect?</p>
-          <label class="inline"><input type="checkbox" name="protection" value="Water quality">Yield</label>
+          <label class="inline"><input type="checkbox" name="protection" value="Crop Yield">Crop Yield</label>
           <label class="inline"><input type="checkbox" name="protection" value="Animal Biodiversity">Animal Biodiversity</label>
           <label class="inline"><input type="checkbox" name="protection" value="Plant Biodiversity">Plant Biodiversity</label>
           <label class="inline"><input type="checkbox" name="protection" value="Water quality">Water quality</label>
